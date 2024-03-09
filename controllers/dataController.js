@@ -23,7 +23,7 @@ const dataController = {
 
       await newUser.save();
 
-      res.status(201).json({ message: 'Data added successfully', user: newUser });
+      res.status(201).json({ message: 'Data added successfully', data: newUser });
     } catch (error) {
       console.error(error);
       res.status(500).json({ error: 'Internal Server Error' });
@@ -50,7 +50,7 @@ const dataController = {
 
       await userToUpdate.save();
 
-      res.json({ message: 'Data updated successfully', user: userToUpdate });
+      res.json({ message: 'Data updated successfully', data: userToUpdate });
     } catch (error) {
       console.error(error);
       res.status(500).json({ error: 'Internal Server Error' });
